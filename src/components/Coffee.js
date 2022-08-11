@@ -1,15 +1,13 @@
 import React from "react";
 
-function Coffee(){
+function Coffee(props){
   return(
   <React.Fragment>
-      <h3>name: Sumatra</h3>
-      <h3>origin: Indonesia</h3>
-      <h3>price: $15/lb</h3>
-      <h3>roast: dark</h3>
-      <p><em>tasty taste.</em></p>
+      <h3>{props.name}</h3>
+      <h3>Roast: {props.roast}. Origin: {props.origin}.</h3>
+      <h3>Price: ${props.price}/lb</h3>
       <hr/>
-    </React.Fragment>
+  </React.Fragment>
   );
 }
 
