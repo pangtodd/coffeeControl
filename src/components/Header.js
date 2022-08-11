@@ -1,8 +1,9 @@
 import React from "react";
+import logo from "./../img/coffeeCommandLogo.png";
 
 function Header(){
-  return (
-    <h1>Coffee Control. Launching your morning in 3...2...1</h1>
+  return (   
+    <img src= {logo} alt="image of sci-fi mission control operators"/>
   );
 }
 
