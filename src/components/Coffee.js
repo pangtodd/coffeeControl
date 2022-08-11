@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 
 function Coffee(props){
   return(
@@ -10,5 +12,12 @@ function Coffee(props){
   </React.Fragment>
   );
 }
+
+Coffee.propTypes={
+  name: PropTypes.string,
+  roast: PropTypes.string,
+  origin: PropTypes.string,
+  price: PropTypes.number
+};
 
 export default Coffee;
