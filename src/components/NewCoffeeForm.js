@@ -1,14 +1,17 @@
 import React from "react";
 import { v4 } from 'uuid';
+import PropTypes from "prop-types";
 
-function NewCoffeeForm(){
-
+function NewCoffeeForm(props){
   function handleNewCoffeeFormSubmission(event){
     event.preventDefault();
-    console.log(event.target.name.value);
-    console.log(event.target.roast.value);
-    console.log(event.target.origin.value);
-    console.log(event.target.price.value);
+    props.onNewCoffeeCreation({
+      name: event.target.name.value,
+      origin: event.target.origin.value,
+      roast: event.target.roast.value,
+      price: parseInt(event.target.price.value),
+      id: v4()
+    });
   }
 
   return (
@@ -18,7 +21,7 @@ function NewCoffeeForm(){
           type="text"
           name="name"
           placeholder="name of coffee" />
-         <input
+        <input
           type="text"
           name="roast"
           placeholder="roast of coffee" />
@@ -35,5 +38,9 @@ function NewCoffeeForm(){
     </React.Fragment>
   );
 }
+
+NewCoffeeForm.propTypes ={
+  onNewCoffeeCreation: PropTypes.func
+};
 
 export default NewCoffeeForm;

@@ -7,7 +7,8 @@ class CoffeeControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formVisibleOnPage: false
+      formVisibleOnPage: false,
+      mainCoffeeList: []
     };
   }
 
@@ -17,15 +18,21 @@ class CoffeeControl extends React.Component {
     }));
   }
 
+  handleAddingNewCoffeeToList = (newCoffee) => {
+    const newMainCoffeeList = this.state.mainCoffeeList.concat(newCoffee);
+    this.setState({mainCoffeeList: newMainCoffeeList,
+                    formVisibleonPage: false});
+  }
+
   render(){
     let currentlyVisibleState =null;
     let buttonText = null;
     if (this.state.formVisibleOnPage){
-      currentlyVisibleState=<NewCoffeeForm />
+      currentlyVisibleState=<NewCoffeeForm onNewCoffeeCreation ={this.handleAddingNewCoffeeToList}/>
       buttonText= "return to coffee list"
     } else {
-      currentlyVisibleState =<CoffeeList />
-      buttonText= "Add a coffee"
+      currentlyVisibleState =<CoffeeList coffeeList={this.state.mainCoffeeList} />
+      buttonText= "Add a coffee";
     }
     return (
       <React.Fragment>
