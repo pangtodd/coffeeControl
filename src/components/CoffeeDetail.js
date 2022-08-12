@@ -11,6 +11,7 @@ function CoffeeDetail(props){
       <p>Roast: {coffee.roast}</p>
       <p>Origin: {coffee.origin}</p>
       <p>Price: ${coffee.price}/lb</p>
+      <p>Amount available {coffee.amount}</p>
       <hr/>
     </React.Fragment>
   );

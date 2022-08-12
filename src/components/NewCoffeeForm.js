@@ -9,6 +9,7 @@ function NewCoffeeForm(props){
       name: event.target.name.value,
       origin: event.target.origin.value,
       roast: event.target.roast.value,
+      amount: 130,
       price: parseInt(event.target.price.value),
       id: v4()
     });
