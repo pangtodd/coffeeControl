@@ -3,7 +3,7 @@ import logo from "./../img/coffeeCommandLogo.png";
 
 function Header(){
   return (   
-    <img src= {logo} alt="image of sci-fi mission control operators"/>
+    <img src= {logo} alt="illustration of sci-fi mission control technicians"/>
   );
 }
 

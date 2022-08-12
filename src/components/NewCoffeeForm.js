@@ -33,7 +33,7 @@ function NewCoffeeForm(props){
           type="number"
           name="price"
           placeholder="prce of coffee per lb" />
-          <button type='submit'>add coffee, return to list</button>
+        <button type='submit'>add coffee</button>
       </form>
     </React.Fragment>
   );
