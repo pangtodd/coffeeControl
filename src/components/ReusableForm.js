@@ -19,6 +19,10 @@ function ReusableForm(props){
           placeholder="origin of coffee" />
         <input
           type="number"
+          name="amount"
+          placeholder="default:130lbs" />
+        <input
+          type="number"
           name="price"
           placeholder="price of coffee per lb" />
         <button type='submit'>{props.buttonText}</button>

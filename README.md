@@ -6,11 +6,11 @@ A react app that keeps track of coffee types and amount.
 
 ## Technologies Used
 
+* React
+* JavaScript
 * NPM
 * HTML
 * CSS
-* JavaScript
-* React
 
 ## Description:
 A simple app/website that uses React (and state) to keep track of a fictional coffee shop's supplies. It allows users to enter in different "sacks" of coffee, each sack contains 130 pounds of coffee. Users can input the name, roast, origin, and cost per lb for each type of coffee. It then allows the user to keep track of the amount of each coffee entered.
