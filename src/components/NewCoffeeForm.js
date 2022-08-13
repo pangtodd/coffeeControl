@@ -9,7 +9,7 @@ function NewCoffeeForm(props){
       name: event.target.name.value,
       origin: event.target.origin.value,
       roast: event.target.roast.value,
-      amount: 130,
+      amount: 13,
       price: parseInt(event.target.price.value),
       id: v4()
     });
@@ -33,7 +33,7 @@ function NewCoffeeForm(props){
         <input
           type="number"
           name="price"
-          placeholder="prce of coffee per lb" />
+          placeholder="price of coffee per lb" />
         <button type='submit'>add coffee</button>
       </form>
     </React.Fragment>
