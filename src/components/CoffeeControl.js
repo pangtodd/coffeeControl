@@ -35,9 +35,7 @@ handleLessCoffeeAmount = (id) =>{
         mainCoffeeList: updatedMainCoffeeList
       })
   } else {
-    setTimeout(()=>{
       alert("sold out!");
-    }, 2000);
   }
 }
 
@@ -67,7 +65,7 @@ handleLessCoffeeAmount = (id) =>{
     let buttonText = null;
 
     if (this.state.selectedCoffee != null){
-      currentlyVisibleState = <CoffeeDetail coffee = {this.state.selectedCoffee} onClickingDelete = {this.handleDeletingCoffee}/> 
+      currentlyVisibleState = <CoffeeDetail coffee = {this.state.selectedCoffee} onClickingDelete = {this.handleDeletingCoffee} onLessCoffee = {this.handleLessCoffeeAmount}/> 
       buttonText= "return to coffee list";
     } else if (this.state.formVisibleOnPage){
       currentlyVisibleState = <NewCoffeeForm onNewCoffeeCreation ={this.handleAddingNewCoffeeToList} />;

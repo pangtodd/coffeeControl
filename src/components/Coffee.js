@@ -5,13 +5,11 @@ import PropTypes from "prop-types";
 function Coffee(props){
   return(
     <React.Fragment>
-      {/* <div onClick ={()=> props.whenCoffeeClicked(props.id)}> */}
-        <h3>{props.name}: ${props.price}/lb</h3>
-        <h3>Amount available: {props.amount}lbs</h3>
-        <button onClick ={()=> props.whenCoffeeClicked(props.id)}>Coffee details</button>
-        <button onClick ={()=> props.whenLessCoffeeClicked(props.id)}>Sell a pound!</button>
-        <hr/>
-      {/* </div> */}
+      <h3>{props.name}: ${props.price}/lb</h3>
+      <h3>Amount available: {props.amount}lbs</h3>
+      <p>See </p>
+      <button onClick ={()=> props.whenCoffeeClicked(props.id)}>Coffee Details: sell or delete coffee type.</button>
+      <hr/>
     </React.Fragment>
   );
 }
