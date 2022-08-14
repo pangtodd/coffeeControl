@@ -98,7 +98,7 @@ handleLessCoffeeAmount = (id) =>{
       currentlyVisibleState = <NewCoffeeForm onNewCoffeeCreation ={this.handleAddingNewCoffeeToList} />;
       buttonText= "return to coffee list";
     } else {
-      currentlyVisibleState =<CoffeeList coffeeList={this.state.mainCoffeeList} onCoffeeSelection ={this.handleChangingSelectedCoffee} onLessCoffee = {this.handleLessCoffeeAmount}/>;
+      currentlyVisibleState =<CoffeeList coffeeList={this.state.mainCoffeeList} onCoffeeSelection ={this.handleChangingSelectedCoffee} />;
       buttonText= "Add a coffee";
     }
 

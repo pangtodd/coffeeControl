@@ -10,6 +10,7 @@ function EditCoffeeForm(props){
     props.onEditCoffee({
       name: event.target.name.value, 
       origin: event.target.origin.value, 
+      roast: event.target.roast.value,
       price: parseInt(event.target.price.value), 
       amount: parseInt(event.target.amount.value), 
       id: coffee.id});
@@ -20,6 +21,12 @@ function EditCoffeeForm(props){
       <ReusableForm 
         formSubmissionHandler={handleEditCoffeeFormSubmission}
         buttonText="Update Coffee" />
+        <p>current values: </p>
+        <p>name: {coffee.name} </p>
+        <p>roast: {coffee.roast} </p>
+        <p>origin: {coffee.origin} </p>
+        <p>amount:{coffee.amount} </p>
+        <p>cost:${coffee.price}</p>
     </React.Fragment>
   );
 }
